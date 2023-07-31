@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add media query for small screens */
+@media (max-width: 768px) {
+  .w-700px {
+    width: 100%;
+  }
+}
+
+
