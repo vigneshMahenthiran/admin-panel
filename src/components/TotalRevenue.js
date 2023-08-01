@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const TotalRevenue = () => {
-  const [revenue, setRevenue] = useState(90); 
+  const [revenue, setRevenue] = useState(90);
 
   const calculateStrokeDashoffset = () => {
-    const circumference = 2 * Math.PI * 40; 
-    const offset = (100 - revenue) / 100 * circumference;
+    const circumference = 2 * Math.PI * 40;
+    const offset = ((100 - revenue) / 100) * circumference;
     return offset;
   };
 
@@ -25,14 +25,20 @@ const TotalRevenue = () => {
             strokeDasharray="226.195"
             strokeDashoffset={calculateStrokeDashoffset()}
           />
-          <text x="50%" y="50%" textAnchor="middle" dominantBaseline="central" fontSize="20" fill="#4299e1">
+          <text
+            x="50%"
+            y="50%"
+            textAnchor="middle"
+            dominantBaseline="central"
+            fontSize="20"
+            fill="#4299e1"
+          >
             {revenue}
           </text>
         </svg>
       </div>
     </div>
   );
-
 };
 
 export default TotalRevenue;
